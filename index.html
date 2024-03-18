@@ -5,18 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Pertemuan 3</title>
+    <title>Pertemuan 3</title> <!--JUDUL UTAMA-->
 </head>
 
 <body>
     <div class="card">
         <img src="./assets/download.jpeg" alt="Poster">
         <div class="text">
-            <h2>Malam Hari di Yogya
-                
-            </h2>
-            
-            <p>Malam hari kota Jogja
+            <h2 class="text-center">Malam Hari di Yogya</h2> <!--judul atas-->
+            <p class="text-center">Malam hari kota Jogja <!--untuk menampilkan kalimat yang di tulis di bawah judul h2-->
                 Mulai terasa nyaman kembali dan dingin
                 Sekarang terasa segar dan tentram
                 Malam hari di kota Jogja
@@ -27,6 +24,34 @@
             </p>
         </div>
     </div>
+
+    <div class="Login-form">
+        <h1 class="text-center">Login</h1>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <p id="waktu"></p> <!--Berfungsi menampilkan waktu dan tanggal-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+            // Simulasi bahwa login berhasil
+            var isSuccess = true; // Ubah menjadi false jika login gagal
+            
+            if (isSuccess) {
+                Swal.fire("MANTEEP!", "SUKSESS OSS!", "success");
+            } else {
+                Swal.fire("Oops...", "Login failed. Invalid username or password.", "error");
+            }
+        });
+    </script>
+    <script src="./script/main.js"></script>
 </body>
 
 </html>
